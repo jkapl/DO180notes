@@ -27,8 +27,9 @@ Below are some additional useful commands for interacting with templates.
 |oc process --parameters <template_name> | List all parameters in the template |
 |oc create -f <filename> | Add new template to OpenShift |
 |oc describe template <name-of-template> | Provide a detailed description of a template including any parameters |
-|oc get -o yaml template <name-of-template> | Output the replica of a template resource in YAML or JSON format |
+|oc get -o yaml template <name-of-template> > file.yaml | Output the replica of a template resource in YAML or JSON format |
 |oc new-app -f <filename> | Deploy an application based on the template file |
+|oc get -o yaml svc,route,is,bc,secret,pvc,dc > draft-template.yaml | Get resources from current state of application to store in a draft template file - need to make some edits to adapt to template format |
 
 ## Example Templates
 
